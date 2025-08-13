@@ -334,7 +334,7 @@
 // }
 
 
-
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import JodhpurMap from "../../components/Layout/Map";
 import Gallery from "../../components/Gallary";
