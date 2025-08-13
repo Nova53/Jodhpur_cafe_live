@@ -24,6 +24,7 @@
 
 // export default Header
 
+import { useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 

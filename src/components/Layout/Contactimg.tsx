@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 
 
 const images = [
@@ -11,7 +12,7 @@ export default function AutoCarousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
+      setCurrentIndex((prevIndex: number) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     }, 2000); // 2 seconds
