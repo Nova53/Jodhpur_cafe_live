@@ -13,9 +13,10 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "react-jsx",
 
-    /* Include React types explicitly */
+    /* React JSX settings */
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "types": ["react", "react-dom"],
 
     /* Linting */
