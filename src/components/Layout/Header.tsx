@@ -1,52 +1,41 @@
-// import React from 'react'
-
-// const Header = () => {
-//   return (
-//     <div className='flex items-center justify-between bg-[url(./image.jpg)] h-[5em] p-[2em]'>
-//       <div className=''>
-//         <ul className='flex items-center justify-between gap-5'>
-//           <li className='text-white hover:text-[#F5652F] active:text-[#F5652F]'>HOME</li>
-//           <li className='text-white hover:text-[#F5652F] active:text-[#F5652F]'>ABOUT US</li>
-//           <li className='text-white hover:text-[#F5652F] active:text-[#F5652F]'>CATRING</li>
-//           <li className='text-white hover:text-[#F5652F] active:text-[#F5652F]'>LOACTION</li>
-//         </ul>
-//       </div>
-//       <div className='flex items-center justify-center '>
-//         <img src='./jclogo.png' className='h-[50px]'/>
-//       </div>
-//       <div className='flex items-center justify-between gap-5'>
-//        <button className='bg-[#F5652F] text-white rounded-[12px] py-[12px] px-[20px] text-[.8em]'>BOOK A TABLE</button>
-//        <button className='bg-[] text-[#F5652F] border border-[#F5652F] rounded-[12px] py-[12px] px-[20px] text-[.8em] hover:text-white hover:bg-[#F5652F]'>ORDER NOW</button>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Header
-
 import { useState } from "react";
-
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoCloseOutline } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
-    <header className="bg-[url(./image.jpg)] bg-cover bg-center">
+    <header className="bg-[url('/image.webp')] bg-cover bg-center">
       <div className="flex items-center justify-between h-[5em] px-4 sm:px-[2em]">
         {/* Left: Nav Links (Desktop) */}
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-5">
-            <li className="text-white hover:text-[#F5652F]">HOME</li>
-            <li className="text-white hover:text-[#F5652F]">ABOUT US</li>
-            <li className="text-white hover:text-[#F5652F]">CATERING</li>
-            <li className="text-white hover:text-[#F5652F]">LOCATION</li>
+            <li className="text-white hover:text-[#F5652F]">
+              <Link to="/">HOME</Link>
+            </li>
+            <li className="text-white hover:text-[#F5652F]">
+              <Link to="/">ABOUT US</Link>
+            </li>
+            <li className="text-white hover:text-[#F5652F]">
+              <Link to="/">CATERING</Link>
+            </li>
+            <li className="text-white hover:text-[#F5652F]">
+              <Link to="/">LOCATION</Link>
+            </li>
           </ul>
         </nav>
 
         {/* Center: Logo */}
-        <div>
-          <img src="./jclogo.png" className="h-[50px]" alt="Logo" />
+        <div className="flex items-center gap-1">
+          <img src="./headerLogo.png" className="h-[30px]" alt="Logo" />
+          <h1 className="text-white">JODHPUR</h1>
         </div>
 
         {/* Right: Buttons (Desktop) */}
@@ -59,28 +48,92 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden text-white text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* Mobile Menu Toggle Button */}
+        <div
+          className="md:hidden text-white text-2xl cursor-pointer"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Full-Screen Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black bg-opacity-90 p-4 space-y-4">
-          <ul className="flex flex-col gap-4">
-            <li className="text-white hover:text-[#F5652F]">HOME</li>
-            <li className="text-white hover:text-[#F5652F]">ABOUT US</li>
-            <li className="text-white hover:text-[#F5652F]">CATERING</li>
-            <li className="text-white hover:text-[#F5652F]">LOCATION</li>
-          </ul>
-          <div className="flex flex-col gap-3 mt-4">
-            <button className="bg-[#F5652F] text-white rounded-[12px] py-[12px] px-[20px] text-[.8em]">
-              BOOK A TABLE
+        <div className="md:hidden fixed inset-0 z-40 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-700">
+          {/* Decorative background patterns */}
+          <div className="absolute inset-0 top-[20%] ">
+             <img src="/Group2.webp" alt="" className="h-[300px] w-[170px]"/>
+          </div>
+
+          <div className="absolute bottom-3 right-0 ">
+             <img src="/Group1.webp" alt="" className="h-[200px] w-[150px]"/>
+          </div>
+
+          {/* Header with logo and close button */}
+          <div className="flex items-center justify-between p-4 h-[5em] relative">
+            <div className="flex items-center gap-1">
+              <img src="./headerLogo.png" className="h-[30px]" alt="Logo" />
+              <h1 className="text-white">JODHPUR</h1>
+            </div>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-white text-2xl cursor-pointer z-50"
+            >
+              <IoCloseOutline />
             </button>
-            <button className="text-[#F5652F] border border-[#F5652F] rounded-[12px] py-[12px] px-[20px] text-[.8em] hover:text-white hover:bg-[#F5652F]">
-              ORDER NOW
-            </button>
+          </div>
+
+          {/* Mobile Navigation Links */}
+          <div className="flex flex-col items-end justify-start h-full mt-10 pr-8 space-y-8 relative">
+            <div className="text-right">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className={`text-2xl font-medium uppercase tracking-wider block ${
+                  isActive("/") ? "text-[#F5652F]" : "text-white"
+                }`}
+              >
+                HOME
+              </Link>
+              <div
+                className={`w-16 h-0.5 mt-2 ml-auto ${
+                  isActive("/") ? "bg-[#F5652F]" : "bg-white"
+                }`}
+              ></div>
+            </div>
+
+            <div className="text-right">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-2xl font-medium uppercase tracking-wider block"
+              >
+                ABOUT US
+              </Link>
+              <div className="w-16 h-0.5 bg-white mt-2 ml-auto"></div>
+            </div>
+
+            <div className="text-right">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-2xl font-medium uppercase tracking-wider block"
+              >
+                CATERING
+              </Link>
+              <div className="w-16 h-0.5 bg-white mt-2 ml-auto"></div>
+            </div>
+
+            <div className="text-right">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className="text-white text-2xl font-medium uppercase tracking-wider block"
+              >
+                LOCATION
+              </Link>
+              <div className="w-16 h-0.5 bg-white mt-2 ml-auto"></div>
+            </div>
           </div>
         </div>
       )}

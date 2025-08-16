@@ -2,11 +2,11 @@ import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white py-10 mt-20">
+    <footer className="relative bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white py-10 ">
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Logo */}
         <img
-          src="/jcicon.png" // replace with your logo path
+          src="/headerLogo.png" // replace with your logo path
           alt="Logo"
           className="w-16 h-16"
         />
@@ -43,7 +43,7 @@ export default function Footer() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: "url('/footer-bg.jpg')", // replace with your image path
+          backgroundImage: "url('/footer-bg.webp')", // replace with your image path
         }}
       ></div>
     </footer>

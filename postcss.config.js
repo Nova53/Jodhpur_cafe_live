@@ -1,6 +1,16 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  plugins: {
-    '@tailwindcss/postcss': {},
-    autoprefixer: {},
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class', // ✅ Add this line
+  theme: {
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
-}
+  plugins: [],
+};

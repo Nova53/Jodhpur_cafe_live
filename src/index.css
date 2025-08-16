@@ -1,9 +1,17 @@
 @import "tailwindcss";
-* {
-  font-family: "AL Nevrada Personal Use Only";
+
+
+.container{
+  max-width: 1440px;
+  margin: 53px auto;
 }
 
 @layer components {
+
+  .container{
+     max-width: 1440px;
+     margin: 53px auto;
+  }
   .btn1 {
     @apply relative py-[12px] px-[20px] font-semibold text-white bg-[#F5652F] rounded-[12px]
         hover:bg-[#ffffff] hover:border hover:border-[#F5652F] active:border-[#F5652F] hover:text-[#F5652F]
@@ -28,5 +36,162 @@
             after:h-[1px] after:w-0 after:bg-current
             group-hover:after:w-full group-hover:after:left-1/2 group-hover:after:translate-x-[-50%]
             after:transition-all after:duration-300
+  }
+}
+
+/* GLOBAL CSS */
+
+.button {
+  position: relative;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Primary variant */
+.button-primary {
+  background-color: #F5652F;
+  color: white;
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: #ffffff;
+  color: #F5652F;
+  border: 1px solid #F5652F;
+}
+
+.button-primary:active {
+  border-color: #F5652F;
+}
+
+/* Secondary variant */
+.button-secondary {
+  background-color: #ffffff;
+  color: #F5652F;
+  border: 1px solid #F5652F;
+}
+
+.button-secondary:hover {
+  background-color: #F5652F;
+  color: white;
+}
+
+.button-secondary:active {
+  background-color: #3B82F6; /* Tailwind blue-500 */
+}
+
+/* Optional text underline effect */
+.button-text {
+  position: relative;
+  z-index: 10;
+}
+
+.button:hover .button-text::after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  gap: 8px;
+}
+
+.custom-checkbox.with-white-bg .checkmark {
+  background-color: white;
+  border-color: white;
+  opacity: 1;
+}
+
+.custom-checkbox input {
+  display: none;
+  
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 2px solid  black;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+  opacity: 20%;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #F5652F; /* blue-600 */
+  border-color: #F5652F;
+ 
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox .label-text {
+  font-size: 14px;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 16px;
+    min-width: 120px;
+  }
+  .container{
+    margin: 40px auto;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 20px;
+    min-width: 140px;
+  }
+
+ 
+}
+
+@media (min-width: 1024px) {
+  .button {
+    font-size: 16px;
+    padding: 14px 24px;
+    min-width: 150px;
   }
 }

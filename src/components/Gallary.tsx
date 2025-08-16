@@ -1,37 +1,97 @@
 import { useState } from "react";
 
+interface GalleryImage {
+  src: string;
+  mobileHeight: string;
+  tabletHeight: string;
+}
 
-const images = [
-  "./Gallaryimg1.jpg",
-  "./Gallaryimg2.jpg",
-  "./Gallaryimg3.jpg",
-  "./Gallaryimg4.jpg",
-  "./Gallaryimg5.jpg",
-  "./Gallaryimg6.jpg",
-  "./Gallaryimg7.jpg",
-  "./Gallaryimg8.jpg",
+const leftColumnImages: GalleryImage[] = [
+  { src: "./Gallaryimg1.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./Gallaryimg2.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./Gallaryimg5.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./Gallaryimg6.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+];
+
+const rightColumnImages: GalleryImage[] = [
+  { src: "./Gallaryimg3.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./Gallaryimg4.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./Gallaryimg7.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./Gallaryimg8.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+];
+
+const allImages = [
+  "./Gallaryimg1.webp",
+  "./Gallaryimg2.webp",
+  "./Gallaryimg3.webp",
+  "./Gallaryimg4.webp",
+  "./Gallaryimg5.webp",
+  "./Gallaryimg6.webp",
+  "./Gallaryimg7.webp",
+  "./Gallaryimg8.webp",
 ];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
-      {/* Masonry layout using CSS columns */}
-      <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
-        {images.map((src, idx) => (
-          <div
-            key={idx}
-            className="mb-4 break-inside-avoid cursor-pointer overflow-hidden rounded-xl"
-            onClick={() => setSelectedImage(src)}
-          >
-            <img
-              src={src}
-              alt={`Gallery ${idx}`}
-              className="w-full h-auto hover:scale-105 transition-transform duration-500"
-            />
+    <div className="mx-8 lg:mx-[60px] mt-10">
+      {/* Mobile & Tablet Layout */}
+      <div className="block lg:hidden">
+        <div className="flex flex-col sm:flex-row gap-4">
+          {/* Left column */}
+          <div className="flex-1 flex flex-col gap-4">
+            {leftColumnImages.map((img, idx) => (
+              <div
+                key={`left-${idx}`}
+                className={`overflow-hidden rounded-xl cursor-pointer ${img.mobileHeight} ${img.tabletHeight}`}
+                onClick={() => setSelectedImage(img.src)}
+              >
+                <img
+                  src={img.src}
+                  alt={`Gallery Left ${idx}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
           </div>
-        ))}
+
+          {/* Right column */}
+          <div className="flex-1 flex flex-col gap-4">
+            {rightColumnImages.map((img, idx) => (
+              <div
+                key={`right-${idx}`}
+                className={`overflow-hidden rounded-xl cursor-pointer ${img.mobileHeight} ${img.tabletHeight}`}
+                onClick={() => setSelectedImage(img.src)}
+              >
+                <img
+                  src={img.src}
+                  alt={`Gallery Right ${idx}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Masonry Layout */}
+      <div className="hidden lg:block">
+        <div className="columns-4 gap-4">
+          {allImages.map((src, idx) => (
+            <div
+              key={idx}
+              className="mb-4 break-inside-avoid cursor-pointer overflow-hidden rounded-xl"
+              onClick={() => setSelectedImage(src)}
+            >
+              <img
+                src={src}
+                alt={`Gallery ${idx}`}
+                className="w-full h-auto hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Modal Lightbox */}

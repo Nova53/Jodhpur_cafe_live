@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 
 const images = [
-  "/Cimg1.jpg", // replace with your imported or public folder paths
-  "/Cimg2.jpg",
-  "/Cimg1.jpg",
+  "/Cimg1.webp", // replace with your imported or public folder paths
+  "/Cimg2.webp",
+  "/Cimg1.webp",
 ];
 
 export default function AutoCarousel() {
