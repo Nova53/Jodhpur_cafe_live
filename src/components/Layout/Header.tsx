@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[url('/image.webp')] bg-cover bg-center">
+    <header className="bg-[url('/images/image.webp')] bg-cover bg-center">
       <div className="flex items-center justify-between h-[5em] px-4 sm:px-[2em]">
         {/* Left: Nav Links (Desktop) */}
         <nav className="hidden md:flex">
@@ -33,9 +33,17 @@ const Header = () => {
         </nav>
 
         {/* Center: Logo */}
-        <div className="flex items-center gap-1">
-          <img src="./headerLogo.png" className="h-[30px]" alt="Logo" />
-          <h1 className="text-white">JODHPUR</h1>
+        <div className="flex items-center justify-center">
+          <img 
+            src="/images/jodhpur.webp" 
+            className="h-[130px] w-auto object-contain" 
+            alt="Jodhpur Cafe Logo" 
+            onError={(e) => {
+              console.error('Logo failed to load:', e);
+              e.currentTarget.style.display = 'none';
+            }}
+            onLoad={() => console.log('Logo loaded successfully')}
+          />
         </div>
 
         {/* Right: Buttons (Desktop) */}
@@ -62,19 +70,27 @@ const Header = () => {
         <div className="md:hidden fixed inset-0 z-40 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-700">
           {/* Decorative background patterns */}
           <div className="absolute inset-0 top-[20%] ">
-             <img src="/Group2.webp" alt="" className="h-[300px] w-[170px]"/>
+             <img src="/images/Group2.webp" alt="" className="h-[300px] w-[170px]"/>
           </div>
 
           <div className="absolute bottom-3 right-0 ">
-             <img src="/Group1.webp" alt="" className="h-[200px] w-[150px]"/>
+             <img src="/images/Group1.webp" alt="" className="h-[200px] w-[150px]"/>
           </div>
 
           {/* Header with logo and close button */}
           <div className="flex items-center justify-between p-4 h-[5em] relative">
-            <div className="flex items-center gap-1">
-              <img src="./headerLogo.png" className="h-[30px]" alt="Logo" />
-              <h1 className="text-white">JODHPUR</h1>
-            </div>
+          <div className="flex items-center justify-center">
+          <img 
+            src="/images/jodhpur.webp" 
+            className="h-[130px] w-auto object-contain" 
+            alt="Jodhpur Cafe Logo" 
+            onError={(e) => {
+              console.error('Logo failed to load:', e);
+              e.currentTarget.style.display = 'none';
+            }}
+            onLoad={() => console.log('Logo loaded successfully')}
+          />
+        </div>
             <button
               onClick={() => setMenuOpen(false)}
               className="text-white text-2xl cursor-pointer z-50"

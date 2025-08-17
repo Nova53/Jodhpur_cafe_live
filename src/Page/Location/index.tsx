@@ -214,14 +214,14 @@ const Location = () => {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-4">
                 <div className="md:col-span-2 overflow-hidden rounded-lg">
                   <img
-                    src="./leads/leed1.webp"
+                    src="./images/leads/leed1.webp"
                     alt="Restaurant Interior - Wide Shot"
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                   />
                 </div>
                 <div className="md:col-span-3 overflow-hidden rounded-lg">
                   <img
-                    src="./leads/leed4.webp"
+                    src="./images/leads/leed4.webp"
                     alt="Jodhpur Logo - Dark Background"
                     className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                   />
@@ -232,21 +232,21 @@ const Location = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src="./leads/leed3.webp"
+                    src="./images/leads/leed3.webp"
                     alt="Namaste Gesture"
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src="./leads/leed2.webp"
+                    src="./images/leads/leed2.webp"
                     alt="Outdoor Dining with Thali"
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                   />
                 </div>
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src="./leads/leed5.webp"
+                    src="./images/leads/leed5.webp"
                     alt="Food Thali Close-up"
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                   />
@@ -271,7 +271,7 @@ const Location = () => {
                     className="overflow-hidden rounded-xl h-[150px] w-[150px] sm:h-[196px] sm:w-[204px]"
                   >
                     <img
-                      src={`./Gallaryimg${num}.webp`}
+                      src={`./images/Gallaryimg${num}.webp`}
                       alt={`Gallery Image ${num}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                     />
@@ -287,7 +287,7 @@ const Location = () => {
                     className="overflow-hidden rounded-xl h-[196px] w-[204px]"
                   >
                     <img
-                      src={`./Gallaryimg${num}.webp`}
+                      src={`./images/Gallaryimg${num}.webp`}
                       alt={`Gallery Image ${num}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                     />
@@ -312,7 +312,7 @@ const Location = () => {
   // Main location page
   return (
     <div className="m-0 p-0">
-      <div className="bg-[url('/headerBanner.png')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
+      <div className="bg-[url('/images/headerBanner.png')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
         <p className="text-[48px] text-[#ffffff]">
           "Find Jodhpur Flavours
           <br /> near you."
@@ -344,7 +344,7 @@ const Location = () => {
         <div className="flex flex-col-reverse sm:flex-row  md:justify-between items-start sm:items-end md:items-center gap-10 mx-[32px] lg:mx-[60px] mt-15">
           <div className=" flex justify-center items-start gap-6 ">
             <div className="hidden md:flex h-6 w-6 lg:h-10 lg:w-10">
-              <img src="./icon.png" alt="Jodhpur Icon" />
+              <img src="./images/icon.webp" alt="Jodhpur Icon" />
             </div>
             <div>
               <p className="text-[#F5652F] text-2xl">नमस्ते,</p>
@@ -375,14 +375,14 @@ const Location = () => {
             <div className="overflow-hidden rounded-lg mb-5">
               <img
                 className="max-h-[520px] w-[363px] object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                src="./img1.webp"
+                src="./images/img1.webp"
                 alt="Restaurant Interior 1"
               />
             </div>
             <div className="overflow-hidden rounded-lg mt-5">
               <img
                 className="max-h-[520px] w-[363px] hover:scale-105 transition-transform duration-500 cursor-pointer"
-                src="./img2.png"
+                src="/images/img2.webp"
                 alt="Restaurant Interior 2"
               />
             </div>
@@ -398,9 +398,11 @@ const Location = () => {
         </div>
         <Gallery />
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-center">
-        <div className="bg-[url('/bg.webp'] bg-cover bg-center bg-no-repeat w-full lg:w-1/2 p-4 sm:p-[2em] flex flex-col justify-center">
-          <ContactForm />
+      <div className="flex flex-col-reverse lg:flex-row justify-center mb-20">
+      <div
+  style={{ backgroundImage: "url('/images/bg.webp')" }}
+  className="bg-cover bg-center bg-no-repeat w-full lg:w-1/2 p-4 sm:p-[2em] flex flex-col justify-center"
+>          <ContactForm />
         </div>
         <div className="hidden lg:flex w-full lg:w-1/2">
           <AutoCarousel />

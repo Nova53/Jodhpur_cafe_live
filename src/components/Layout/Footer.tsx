@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col items-center space-y-4">
         {/* Logo */}
         <img
-          src="/headerLogo.png" // replace with your logo path
+          src="/images/headerLogo.webp" // replace with your logo path
           alt="Logo"
           className="w-16 h-16"
         />
@@ -43,7 +43,7 @@ export default function Footer() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: "url('/footer-bg.webp')", // replace with your image path
+          backgroundImage: "url('./images/footer-bg.webp')", // replace with your image path
         }}
       ></div>
     </footer>

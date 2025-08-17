@@ -7,28 +7,28 @@ interface GalleryImage {
 }
 
 const leftColumnImages: GalleryImage[] = [
-  { src: "./Gallaryimg1.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
-  { src: "./Gallaryimg2.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
-  { src: "./Gallaryimg5.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
-  { src: "./Gallaryimg6.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./images/Gallaryimg1.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./images/Gallaryimg2.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./images/Gallaryimg5.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./images/Gallaryimg6.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
 ];
 
 const rightColumnImages: GalleryImage[] = [
-  { src: "./Gallaryimg3.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
-  { src: "./Gallaryimg4.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
-  { src: "./Gallaryimg7.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
-  { src: "./Gallaryimg8.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./images/Gallaryimg3.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./images/Gallaryimg4.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
+  { src: "./images/Gallaryimg7.webp", mobileHeight: "h-[100px]", tabletHeight: "sm:h-[221px]" },
+  { src: "./images/Gallaryimg8.webp", mobileHeight: "h-[150px]", tabletHeight: "sm:h-[422px]" },
 ];
 
 const allImages = [
-  "./Gallaryimg1.webp",
-  "./Gallaryimg2.webp",
-  "./Gallaryimg3.webp",
-  "./Gallaryimg4.webp",
-  "./Gallaryimg5.webp",
-  "./Gallaryimg6.webp",
-  "./Gallaryimg7.webp",
-  "./Gallaryimg8.webp",
+  "./images/Gallaryimg1.webp",
+  "./images/Gallaryimg2.webp",
+  "./images/Gallaryimg3.webp",
+  "./images/Gallaryimg4.webp",
+  "./images/Gallaryimg5.webp",
+  "./images/Gallaryimg6.webp",
+  "./images/Gallaryimg7.webp",
+  "./images/Gallaryimg8.webp",
 ];
 
 export default function Gallery() {
