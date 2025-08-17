@@ -73,15 +73,16 @@ const Location = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-b from-[#F5F5DC] to-white flex flex-col gap-15 px-[20px] sm:px-[32px] md:px-[60px]">
+        <div className="bg-gradient-to-b from-[#F5F5DC] to-white flex flex-col gap-7 sm:gap-15 px-[20px] sm:px-[32px] md:px-[60px]">
           {/* Location Information Section with Light Beige Background */}
-          <div className="py-16">
+          <div className="">
             <div className="container">
               {/* Location Selection Buttons */}
-              <div className="flex items-center justify-center gap-5 mb-12">
+              <div className="flex items-center justify-center gap-5 mb-6 sm:mb-10">
                 <Button
                   variant={activeTab === "leeds" ? "primary" : "secondary"}
                   onClick={() => setActiveTab("leeds")}
+                  className="w-full sm:w-fit"
                 >
                   LEEDS
                 </Button>
@@ -89,13 +90,14 @@ const Location = () => {
                 <Button
                   variant={activeTab === "harrogate" ? "primary" : "secondary"}
                   onClick={() => setActiveTab("harrogate")}
-                >
+                    className="w-full sm:w-fit"
+                > 
                   HARROGATE
                 </Button>
               </div>
 
               {/* Introductory Text */}
-              <div className="text-left mb-12">
+              <div className="text-left mb-6 sm:mb-10">
                 <p className="text-lg text-left text-gray-700">
                   {currentLocation.description}
                 </p>
@@ -104,13 +106,14 @@ const Location = () => {
               {/* Main Content Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Left Column - Contact & Hours */}
-                <div className="space-y-8">
+                <div className=" space-y-5 sm:space-y-8">
                   {/* Opening Hours */}
                   <div>
-                    <h3 className="text-xl md:text-2xl text-[#F5652F] font-semibold mb-4">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#F5652F] mb-4">
+
                       Opening Time
                     </h3>
-                    <div className="space-y-3 flex justify-between flex-wrap gap-4">
+                    <div className="space-y-3 flex justify-between flex-wrap gap-2  sm:gap-4">
                       {Object.entries(currentLocation.openingHours).map(
                         ([day, hours]) => (
                           <div
@@ -155,7 +158,7 @@ const Location = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <Button variant="primary">LUNCH MENU</Button>
                     <Button variant="secondary">DINNER MENU</Button>
                   </div>
@@ -199,9 +202,9 @@ const Location = () => {
             </div>
           </div>
 
-          <div className="py-16">
+          <div className="">
             {/* Visual Of Leeds/Harrogate Section */}
-            <div className="text-center mb-12">
+            <div className="text-center ">
               <h2 className="text-2xl sm:text-4xl text-[#F5652F] font-bold font-[Poppins]">
                 Visual Of {currentLocation.name}
               </h2>
@@ -254,7 +257,7 @@ const Location = () => {
 
           {/* Connect With Jodhpur Section */}
           <div className="flex flex-col items-center pb-20">
-            <div className="text-center mb-12">
+            <div className="text-center mb-6 sm:mb-10">
               <h2 className="text-2xl sm:text-4xl text-[#F5652F] font-bold font-[Poppins]">
                 Connect With Jodhpur
               </h2>
@@ -320,8 +323,8 @@ const Location = () => {
       </div>
 
       {/* Location Tabs */}
-      <div className="container py-16">
-        <div className="flex items-center justify-center gap-5 mb-12">
+      <div className="container">
+        <div className="flex items-center justify-center gap-5 mb-10">
           <Button
             variant={activeTab === "leeds" ? "primary" : "secondary"}
             onClick={() => setActiveTab("leeds")}
@@ -338,13 +341,13 @@ const Location = () => {
         </div>
 
         {/* Location Content */}
-        <div className="flex flex-col-reverse sm:flex-row md:justify-between items-start sm:items-end md:items-center gap-12 mx-[32px] lg:mx-[60px]">
+        <div className="flex flex-col-reverse sm:flex-row md:justify-between items-start sm:items-end md:items-center gap-6 sm:gap-12 mx-[32px] lg:mx-[60px]">
           <div className="flex justify-center items-start gap-8">
             <div className="hidden md:flex h-6 w-6 lg:h-10 lg:w-10">
               <img src="./images/icon.webp" alt="Jodhpur Icon" />
             </div>
             <div>
-              <p className="text-[#F5652F] text-2xl mb-2">नमस्ते,</p>
+              <p className="text-[#F5652F] text-2xl mb-0 sm:mb-2">नमस्ते,</p>
               <p className="text-[#F5652F] text-3xl mb-4">{currentLocation.name}</p>
               <p className="mb-6">
                 {currentLocation.address.split(", ").map((line, index) => (
@@ -386,8 +389,8 @@ const Location = () => {
         </div>
       </div>
 
-      <div className="container py-16">
-        <div className="text-center mb-12">
+      <div className="container">
+        <div className="text-center ">
           <h2 className="text-4xl text-[#F5652F] font-bold font-[Poppins]">
             Jodhpur's Gallery
           </h2>
