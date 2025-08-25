@@ -12,7 +12,7 @@ export default function Footer() {
         />
 
         {/* Tagline */}
-        <p className="text-orange-500 font-semibold tracking-wider text-center">
+        <p className="text-orange-500 font-semibold tracking-wider text-center " style={{fontFamily: 'alNevrada'}}>
           TRADITION - TASTE - ROYALTY
         </p>
 

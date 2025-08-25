@@ -8,6 +8,8 @@ export default {
       extend: {
         fontFamily: {
           poppins: ["Poppins", "sans-serif"],
+          alNevrada :["AL Nevrada", "sans-serif"]
+
         },
       },
     },

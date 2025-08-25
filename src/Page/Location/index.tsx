@@ -60,15 +60,15 @@ const Location = () => {
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
-            style={{ backgroundImage: "url('/images/headerBanner2.webp')" }}
+            style={{ backgroundImage: "url('/headerBanner2.png')" }}
           ></div>
 
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black opacity-60"></div>
 
           {/* Content */}
-          <p className="text-[48px] text-white z-10 font-semibold">नमस्ते</p>
-          <p className="text-[#F26632] text-[64px] z-10 font-bold">
+          <p className="text-[48px] text-white z-10 font-semibold">नमस्ते</p> 
+          <p className="text-[#F26632] text-[64px] z-10 font-bold" style={{fontFamily: 'alNevrada'}}>
             {currentLocation.name}
           </p>
         </div>
@@ -312,7 +312,7 @@ const Location = () => {
   // Main location page
   return (
     <div className="m-0 p-0">
-      <div className="bg-[url('/images/headerBanner.webp')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
+      <div className="bg-[url('/images/headerBanner.png')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
         <p className="text-[48px] text-[#ffffff]">
           "Find Jodhpur Flavours
           <br /> near you."
@@ -347,9 +347,9 @@ const Location = () => {
               <img src="./images/icon.webp" alt="Jodhpur Icon" />
             </div>
             <div>
-              <p className="text-[#F5652F] text-2xl mb-0 sm:mb-2">नमस्ते,</p>
-              <p className="text-[#F5652F] text-3xl mb-4">{currentLocation.name}</p>
-              <p className="mb-6">
+              <p className="text-[#F5652F] text-2xl">नमस्ते,</p>
+              <p className="text-[#F5652F] text-3xl">{currentLocation.name}</p>
+              <p className="py-[1em]">
                 {currentLocation.address.split(", ").map((line, index) => (
                   <span key={index} className="text-xl">
                     {line}
