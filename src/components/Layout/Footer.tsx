@@ -43,7 +43,7 @@ export default function Footer() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: "url('./images/footer-bg.webp')", // replace with your image path
+          backgroundImage: "url('./images/bg_fream.jpg')", // replace with your image path
         }}
       ></div>
     </footer>
