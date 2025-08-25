@@ -311,7 +311,7 @@ const Location = () => {
 
   // Main location page
   return (
-    <div className="m-0 p-0">
+    <div className="m-0 p-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('images/bg_img.jpg')" }}>
       <div className="bg-[url('/images/headerBanner.png')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
         <p className="text-[48px] text-[#ffffff]" style={{fontFamily: 'alNevrada'}}>
           "Find Jodhpur Flavours
