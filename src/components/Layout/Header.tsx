@@ -12,7 +12,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[url('/images/image.webp')] bg-cover bg-center">
+    <header className="bg-cover bg-center" style={{
+          backgroundImage: "url('/images/nav_bg.jpg')", // replace with your image path
+        }}>
       <div className="flex items-center justify-between h-[5em] px-4 sm:px-[2em]">
         {/* Left: Nav Links (Desktop) */}
         <nav className="hidden md:flex">
