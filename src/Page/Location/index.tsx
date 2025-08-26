@@ -60,7 +60,7 @@ const Location = () => {
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
-            style={{ backgroundImage: "url('images/headerBanner2.png')" }}
+            style={{ backgroundImage: "url('./images/headerBanner2.webp')" }}
           ></div>
 
           {/* Dark Overlay */}
@@ -312,7 +312,7 @@ const Location = () => {
   // Main location page
   return (
     <div className="m-0 p-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('images/bg_img.jpg')" }}>
-      <div className="bg-[url('images/headerBanner.png')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
+      <div className="bg-[url('./images/headerBanner.webp')] bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center">
         <p className="text-[48px] text-[#ffffff]">
           "Find Jodhpur Flavours
           <br /> near you."
