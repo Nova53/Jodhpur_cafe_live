@@ -73,7 +73,7 @@ const Location = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-b from-[#F5F5DC] to-white flex flex-col gap-7 sm:gap-15 px-[20px] sm:px-[32px] md:px-[60px]">
+        <div className=" flex flex-col gap-7 sm:gap-15 px-[20px] sm:px-[32px] md:px-[60px]" style={{ backgroundImage: "url('images/bg_img.jpg')" }}>
           {/* Location Information Section with Light Beige Background */}
           <div className="">
             <div className="container">
