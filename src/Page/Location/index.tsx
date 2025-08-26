@@ -68,7 +68,7 @@ const Location = () => {
 
           {/* Content */}
           <p className="text-[48px] text-white z-10 font-semibold">नमस्ते</p> 
-          <p className="text-[#F26632] text-[64px] z-10 font-bold" style={{fontFamily: 'alNevrada'}}>
+          <p className="text-[#F26632] text-[64px] z-10 font-bold font-alNevrada" style={{fontFamily: 'alNevrada'}}>
             {currentLocation.name}
           </p>
         </div>
