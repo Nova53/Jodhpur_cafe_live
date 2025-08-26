@@ -315,7 +315,7 @@ const Location = () => {
       <div className=" bg-cover bg-center bg-no-repeat h-[500px] p-0 m-0 flex flex-col justify-center items-center text-center"
        style={{ backgroundImage: "url('./images/headerBanner.webp')" }}
       >
-        <p className="text-[48px] text-[#ffffff]">
+        <p className="text-[48px] text-[#ffffff]" style={{fontFamily: 'alNevrada'}}>
           "Find Jodhpur Flavours
           <br /> near you."
         </p>
@@ -350,7 +350,7 @@ const Location = () => {
             </div>
             <div>
               <p className="text-[#F5652F] text-2xl">नमस्ते,</p>
-              <p className="text-[#F5652F] text-3xl">{currentLocation.name}</p>
+              <p className="text-[#F5652F] text-3xl" style={{fontFamily: 'alNevrada'}}>{currentLocation.name}</p>
               <p className="py-[1em]">
                 {currentLocation.address.split(", ").map((line, index) => (
                   <span key={index} className="text-xl">
@@ -378,6 +378,9 @@ const Location = () => {
                 className="max-h-[520px] w-[363px] object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
                 src="./images/img1.webp"
                 alt="Restaurant Interior 1"
+
+                
+
               />
             </div>
             <div className="overflow-hidden rounded-lg mt-5">
@@ -400,7 +403,7 @@ const Location = () => {
         <Gallery />
       </div>
       
-      <div className="flex flex-col-reverse lg:flex-row justify-center">
+      <div className="flex flex-col-reverse lg:flex-row justify-center mb-20">
         <div className="bg-[url('/images/bg.webp')] bg-cover bg-center bg-no-repeat w-full lg:w-1/2 p-4 sm:p-[2em] flex flex-col justify-center">
           <ContactForm />
         </div>
