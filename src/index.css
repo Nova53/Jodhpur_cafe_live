@@ -6,6 +6,14 @@
   margin: 53px auto;
 }
 
+
+@font-face {
+  font-family: 'AL Nevrada';
+  src: url('./assets/AL_Nevrada_Personal_Use_Only.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer components {
 
   .container{
@@ -40,12 +48,7 @@
 }
 
 
-@font-face {
-  font-family: 'AL Nevrada';
-   src: url('/fonts/ALNevrada.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 
 /* GLOBAL CSS */
